@@ -1,0 +1,98 @@
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:50px;
+    padding: 15px 10%;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.nav-bar h1{
+    margin: 0;
+    font-size: 1.5rem;
+}
+.nav-bar .nav-bar-btns{
+    display: flex;
+    text-align: center;
+}
+.nav-bar .nav-bar-btn {
+    color: rgba(0, 0, 0, 1);
+    margin: 10px 25px;
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    outline: none; /* Add this line to remove the focus outline */
+    width: 100px; /* Adjust the width as needed */
+}
+.nav-bar .nav-bar-btn:hover{
+    color: rgba(150, 150, 150, 1);
+}
+.nav-bar svg{
+    color: white;
+}
+.nav-bar .menu-icon{
+    display: none;
+}
+.submenu-content {
+    position: absolute;
+    top: 100%; /* Position it below the main menu element */
+
+    left: 50%; /* Horizontally center it */
+    transform: translateX(-50%); /* Center it horizontally */
+    display: none;
+    background-color: rgba(25, 25, 25, .5);
+    color: #000;
+
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.submenu-content .submenu-content-bg {
+color: white;
+
+}
+.nav-bar-btn.hovered .submenu-content {
+    display: block;
+}
+.home-icon{
+    margin-top:20px;
+}
+
+@media screen and (max-width: 40em) {
+    .nav-bar-btns{
+        position: fixed;
+        height: 100vh;
+        background-color: black;
+        top: 0;
+        right:0;
+        flex-direction: column;
+        padding: 10% 10px;
+        min-width: 60%;
+        transition: all 1s ease;
+        transform:translate(100%, 0);
+        z-index: 100;
+
+    }
+    .nav-bar-btns.opened{
+        transform:translate(0,0)
+    }
+    .nav-bar .nav-bar-btn{
+        width: 100%;
+        padding: 0 10%;
+        margin: 20px 0;
+        color:white;
+    }
+    .nav-bar .menu-icon{
+        display: block;
+    }
+    .nav-bar .icon-close{
+        top: -40px;
+        right:-100px;
+    }
+}
+
