@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import NavBar from "@/Components/nav-bar/NavBar";
 import footer from "@/Components/footer/Footer";
 import Footer from "@/Components/footer/Footer";
-
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -26,38 +26,43 @@ export default function Home() {
     return (
 
         <main className="flex min-h-screen items-center justify-center p-24">
-            <NavBar/>
-            <div className="">
+            <NavBar />
+            <a href="../../../galeria-fotos/src/photoGallery.js" className="text-blue-400">redirect</a>
+            <div className="flex flex-col items-center justify-center">
                 {loading ? (
                     result ? (
-                        <div className='flex flex-col items-center justify-center space-y-10'>
+                        <div className="text-center">
                             <div className={`text-5xl font-bold ${result === 'success' ? 'text-green-700' : 'text-red-600'}`}>
                                 {result === 'success' ? 'Resumes loaded with success!' : 'Failed to load resumes'}
                             </div>
-                            <button onClick={beginLoading} className='bg-slate-500 rounded-full px-6 py-4 text-white font-bold'>Reload</button>
+                            <button onClick={beginLoading} className="bg-slate-500 rounded-full px-6 py-4 text-white font-bold">Reload</button>
                         </div>
                     ) : (
                         <LoadingScreen />
                     )
                 ) : (
-                    <div>
-                        <button
-                            onClick={beginLoading}
-                            className='bg-slate-500 rounded-full m-10'
-                            style={{ width: '300px', height: '300px', backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
-                        >
-                        </button>
-                        <button
-                            onClick={beginLoading}
-                            className='bg-slate-500 rounded-full m-10'
-                            style={{ width: '300px', height: '300px', backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
-                        >
-                        </button>
+                    <div className="flex flex-col items-center">
+                        <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}
+                            <button
+                                onClick={beginLoading}
+                                className="bg-slate-500 rounded-full w-full h-full"
+                                style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
+                            ></button>
+                        </div>
+                        <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}
+                            <button
+                                onClick={beginLoading}
+                                className="bg-slate-500 rounded-full w-full h-full"
+                                style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
+                            ></button>
+                        </div>
                     </div>
                 )}
             </div>
-            <Footer/>
+            <Footer />
         </main>
+
+
 
 
 
