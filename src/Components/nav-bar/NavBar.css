@@ -10,6 +10,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+
 }
 .nav-bar h1{
     margin: 0;
@@ -33,7 +34,7 @@
     color: rgba(150, 150, 150, 1);
 }
 .nav-bar svg{
-    color: white;
+    color: black;
 }
 .nav-bar .menu-icon{
     display: none;
@@ -46,7 +47,7 @@
     transform: translateX(-50%); /* Center it horizontally */
     display: none;
     background-color: rgba(25, 25, 25, .5);
-    color: #000;
+
 
     flex-direction: column;
     align-items: center;
@@ -64,12 +65,29 @@ color: white;
 }
 
 @media screen and (max-width: 40em) {
+
+    .nav-bar{
+        background-color:white;
+
+    }
+    .nav-bar .nav-bar-btn {
+        color: rgba(0, 0, 0, 1);
+        margin: 10px 25px;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        position: relative;
+        outline: none; /* Add this line to remove the focus outline */
+        width: 100px; /* Adjust the width as needed */
+    }
     .nav-bar-btns{
         position: fixed;
         height: 100vh;
         background-color: black;
         top: 0;
         right:0;
+        text-align: left;
+        background-color:white;
         flex-direction: column;
         padding: 10% 10px;
         min-width: 60%;
@@ -77,15 +95,18 @@ color: white;
         transform:translate(100%, 0);
         z-index: 100;
 
+
     }
     .nav-bar-btns.opened{
-        transform:translate(0,0)
+        transform:translate(0,0);
+
+
     }
     .nav-bar .nav-bar-btn{
         width: 100%;
-        padding: 0 10%;
+        padding: 0 20%;
         margin: 20px 0;
-        color:white;
+        color:black;
     }
     .nav-bar .menu-icon{
         display: block;
@@ -93,6 +114,23 @@ color: white;
     .nav-bar .icon-close{
         top: -40px;
         right:-100px;
+    }
+    .submenu-content {
+        position: relative;
+        top: 0; /* Position it below the main menu element */
+        margin-top:10px;
+        text-align: left;
+
+        display: block; /* Change this from display: none; to display: block; */
+        background-color: rgba(25, 25, 25, 0);
+
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .submenu-content .submenu-content-bg {
+        color: black;
+
     }
 }
 
