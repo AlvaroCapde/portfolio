@@ -7,8 +7,14 @@ export default class NavBar extends Component {
     constructor(props) {
         super(props);
 
-        const maxHeight = window.innerHeight - 50;
-        const scrollToTop = (Math.min(window.scrollY, maxHeight) / maxHeight);
+        let maxHeight = 0;
+        let scrollToTop = 0;
+
+        if (typeof window !== 'undefined') {
+            maxHeight = window.innerHeight - 50;
+            scrollToTop = (Math.min(window.scrollY, maxHeight) / maxHeight);
+        }
+
         this.state = {
             scrollToTop: scrollToTop,
             openedMenu: false, // for the main menu
@@ -38,8 +44,8 @@ export default class NavBar extends Component {
         const { scrollToTop } = this.state;
 
         return (
-            <div className='nav-bar' style={{ backgroundColor: 'rgba(0, 0, 0, ' + scrollToTop + ')', boxShadow: `0 2px 20px 0px rgba(0,0, 0, ${(scrollToTop * 0.25)})` }}>
-                <h1 className='home-icon'>NavBar</h1>
+            <div className='nav-bar'>
+                <h1 className='home-icon'>Name</h1>
                 <div className={'nav-bar-btns' + (this.state.openedMenu ? ' opened' : '')}>
                     <IconButton className='menu-icon icon-close' onClick={this.handleMainMenuClick}>
                         <CloseSharp />
