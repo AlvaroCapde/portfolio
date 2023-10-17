@@ -26,7 +26,6 @@ export default function Home() {
     return (
 
         <main className="flex min-h-screen items-center justify-center p-24">
-            <NavBar />
             <a href="../../../galeria-fotos/src/photoGallery.js" className="text-blue-400">redirect</a>
             <div className="flex flex-col items-center justify-center">
                 {loading ? (
