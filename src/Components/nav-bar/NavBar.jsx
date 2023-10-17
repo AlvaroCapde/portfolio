@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import { IconButton, Menu, MenuItem } from '@mui/material';
-import { CloseSharp, MenuSharp } from '@mui/icons-material';
+import { CloseSharp, MenuSharp, Add } from '@mui/icons-material';
 
 export default class NavBar extends Component {
     constructor(props) {
@@ -50,13 +50,13 @@ export default class NavBar extends Component {
                     <IconButton className='menu-icon icon-close' onClick={this.handleMainMenuClick}>
                         <CloseSharp />
                     </IconButton>
-                    <NavBarBtn label="Photography"> {/* Updated */}
+                    <NavBarBtn label="Photography" hasSubMenu> {/* Updated */}
                         <SubMenu>
                             <MenuItem>Option 1</MenuItem>
                             <MenuItem>Option 2</MenuItem>
                         </SubMenu>
                     </NavBarBtn>
-                    <NavBarBtn label="Animation"> {/* Updated */}
+                    <NavBarBtn label="Animation" hasSubMenu> {/* Updated */}
                         <SubMenu>
                             <MenuItem>Option A</MenuItem>
                             <MenuItem>Option B</MenuItem>
@@ -78,6 +78,7 @@ class NavBarBtn extends Component {
         super(props);
         this.state = {
             isHovered: false,
+            expanded: false, // New state to track submenu expansion
         };
     }
 
@@ -88,16 +89,41 @@ class NavBarBtn extends Component {
     handleMouseLeave = () => {
         this.setState({ isHovered: false });
     }
+
+    // Toggle the submenu expansion state
+    handleSubMenuClick = () => {
+        this.setState({ expanded: !this.state.expanded });
+    }
+
     render() {
-        const { label, children } = this.props;
-        const { isHovered } = this.state;
+        const { label, children, hasSubMenu } = this.props;
+        const { isHovered, expanded } = this.state;
+
+        // Check if the screen width is less than a certain value (e.g., 40 * 16).
+        const isNarrowScreen = window.innerWidth < 40 * 16;
+
         return (
             <div className={`nav-bar-btn ${isHovered ? 'hovered' : ''}`} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                 {label || children}
-                {isHovered && children && <div className="submenu-content">{children}</div>}
+
+                {hasSubMenu && isNarrowScreen && (
+                    <IconButton className="submenu-toggle" onClick={this.handleSubMenuClick}>
+                        {expanded ? <CloseSharp /> : <Add />}
+                    </IconButton>
+                )}
+
+                {children && expanded && (
+                    <div className="submenu-content">{children}</div>
+                )}
+
+                {/* Display the submenu, if applicable, but not within submenu-toggle */}
+                {isHovered && children && !isNarrowScreen && (
+                    <div className="submenu-content">{children}</div>
+                )}
             </div>
         );
     }
+
 }
 
 function SubMenu({ children }) {

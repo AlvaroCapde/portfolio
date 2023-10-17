@@ -98,10 +98,10 @@ color: black;
 
 
     }
+
+
     .nav-bar-btns.opened{
         transform:translate(0,0);
-
-
     }
     .nav-bar .nav-bar-btn{
         width: 100%;
@@ -120,8 +120,8 @@ color: black;
         position: relative;
         top: 0;
         margin-top:10px;
-        text-align: left;
 
+        text-align: left;
         display: block;
         background-color: rgba(25, 25, 25, 0);
 
