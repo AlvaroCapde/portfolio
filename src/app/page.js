@@ -1,11 +1,13 @@
 'use client'
 import {useCallback, useState} from "react";
 import {LoadingScreen} from "@/Components/LoadingScreen";
-import { useRouter } from 'next/router';
+
 import NavBar from "@/Components/nav-bar/NavBar";
 import footer from "@/Components/footer/Footer";
 import Footer from "@/Components/footer/Footer";
+import '../styles.css';
 import Link from 'next/link';
+
 
 
 export default function Home() {
@@ -27,8 +29,8 @@ export default function Home() {
 
         <main className="flex min-h-screen items-center justify-center p-24">
             <NavBar />
-            <a href="../../../galeria-fotos/src/photoGallery.js" className="text-blue-400">redirect</a>
-            <div className="flex flex-col items-center justify-center">
+            <a href="photoGallery.js" className="text-blue-400">redirect</a>
+            <div className="flexColumn" style={{marginTop:'-50px'}}>
                 {loading ? (
                     result ? (
                         <div className="text-center">

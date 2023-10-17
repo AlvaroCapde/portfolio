@@ -1,0 +1,73 @@
+.stdButton{
+    @apply bg-slate-500 rounded-full px-6 py-3 text-white font-bold;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.center-margin{
+    margin-top:-100px;
+}
+.passwordPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(at 125% center, rgb(219, 231, 255), rgb(79, 94, 115), rgb(219, 231, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background: conic-gradient(at 125% center, rgb(219, 231, 255), rgb(79, 94, 115), rgb(219, 231, 255));
+}
+.page-margin{
+    margin-bottom:15%;
+
+}
+
+.body-padding{
+    padding: 50px 100px;
+}
+.text{
+    text-align: left;
+}
+.contact-table {
+    width: 40%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(118, 135, 155, 0.37);
+
+}
+/* In your styles.css or a separate CSS file */
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.contact-table td {
+    padding: 10px;
+    border: 1px solid rgb(101, 116, 140);
+}
+
+.contact-table strong {
+    font-weight: bold;
+}
+@media screen and (max-width: 40em) {
+    .body-padding{
+        padding: 50px 25px;
+    }
+    .page-margin{
+        margin-bottom:75%;
+
+    }
+}

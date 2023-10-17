@@ -3,14 +3,14 @@
     top: 0;
     left: 0;
     width:100%;
-    height:50px;
+    height:75px;
     padding: 15px 10%;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-
+    background-color:white;
 }
 .nav-bar h1{
     margin: 0;
@@ -22,13 +22,14 @@
 }
 .nav-bar .nav-bar-btn {
     color: rgba(0, 0, 0, 1);
-    margin: 10px 25px;
+    margin: 10px 0;
+
 
     cursor: pointer;
     transition: all 0.5s ease;
     position: relative;
-    outline: none; /* Add this line to remove the focus outline */
-    width: 100px; /* Adjust the width as needed */
+    outline: none;
+    width: 100px;
 }
 .nav-bar .nav-bar-btn:hover{
     color: rgba(150, 150, 150, 1);
@@ -41,12 +42,12 @@
 }
 .submenu-content {
     position: absolute;
-    top: 100%; /* Position it below the main menu element */
+    top: 100%;
 
-    left: 50%; /* Horizontally center it */
-    transform: translateX(-50%); /* Center it horizontally */
+    left: 50%;
+    transform: translateX(-50%);
     display: none;
-    background-color: rgba(25, 25, 25, .5);
+    background-color: rgba(252, 252, 255, 1);
 
 
     flex-direction: column;
@@ -54,7 +55,7 @@
     border-radius: 10px;
 }
 .submenu-content .submenu-content-bg {
-color: white;
+color: black;
 
 }
 .nav-bar-btn.hovered .submenu-content {
@@ -77,13 +78,13 @@ color: white;
         cursor: pointer;
         transition: all 0.5s ease;
         position: relative;
-        outline: none; /* Add this line to remove the focus outline */
-        width: 100px; /* Adjust the width as needed */
+        outline: none;
+        width: 100px;
     }
     .nav-bar-btns{
         position: fixed;
         height: 100vh;
-        background-color: black;
+
         top: 0;
         right:0;
         text-align: left;
@@ -117,11 +118,11 @@ color: white;
     }
     .submenu-content {
         position: relative;
-        top: 0; /* Position it below the main menu element */
+        top: 0;
         margin-top:10px;
         text-align: left;
 
-        display: block; /* Change this from display: none; to display: block; */
+        display: block;
         background-color: rgba(25, 25, 25, 0);
 
         flex-direction: column;
