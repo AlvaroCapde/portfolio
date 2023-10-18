@@ -23,7 +23,7 @@ const images = [
 
 function App() {
     return (
-        <div className="App page-margin" style={{ marginBottom: '20%', marginTop: '5%' }}>
+        <div className="App page-margin" style={{marginTop: '5%' }}>
             <NavBar />
             <div className="body-padding">
                 <h1 className="page-title">Scalable Photo Gallery</h1>
@@ -32,9 +32,7 @@ function App() {
             </div>
             <Gallery photos={images} /> {/* Use the Gallery component with wedding photos */}
 
-            <div className='footer-fixed'>
-                <Footer />
-            </div>
+
         </div>
     );
 }

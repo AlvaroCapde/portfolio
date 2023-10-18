@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
 import Footer from "@/Components/footer/Footer";
 import Gallery from "@/Components/Gallery/Gallery";
+import Downloads from "@/Components/download-btns/Downloads";
 
 import PasswordProtectedPage from "@/Components/password/PasswordProtectedPage";
 
@@ -97,18 +98,17 @@ function App() {
 
     return (
         <div>
-            <LoadingScreen></LoadingScreen>
-           <PasswordProtectedPage correctPassword="anasofi9923" />
-            <div className="App page-margin" style={{ marginTop: '5%', marginBottom:'15%a'}}>
+
+
+            <div className="App page-margin" style={{ marginTop: '5%', }}>
+                <Downloads></Downloads>
                 <NavBar></NavBar>
                 <div className="body-padding">
                 <h1 className="page-title">Ana Sofi</h1>
 
                 </div>
                 <Gallery photos={images} />
-                <div className='footer-fixed'>
-                    <Footer />
-                </div>
+
             </div>
         </div>
     );

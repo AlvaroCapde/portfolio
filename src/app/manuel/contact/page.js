@@ -33,9 +33,7 @@ function Contact() {
                     </tbody>
                 </table>
             </div>
-            <div className='footer-fixed'>
-            <Footer />
-            </div>
+
         </div>
     );
 }

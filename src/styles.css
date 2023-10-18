@@ -16,11 +16,12 @@ h1 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 5px;
-    margin: 20px auto;
+
+    margin: 20px 10%;
     min-width:25%;
     max-width: 100%;
-    padding: 0 20px;
+    gap: 10px;
+    align-items: center;
 }
 
 
@@ -57,6 +58,28 @@ button:disabled {
 .center-margin{
     margin-top:-100px;
 }
+.button-container {
+    position:relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 100px 10%;
+    margin-bottom: -10px !important;
+
+
+
+}
+
+.top-right-button {
+    position: relative;
+    padding: 10px 10px;
+
+    cursor: pointer;
+
+}
 .passwordPage {
     position: fixed;
     top: 0;
@@ -84,9 +107,7 @@ button:disabled {
 body{
     background: white;
 }
-.page-margin{
-    margin-bottom:15%;
-}
+
 .body-padding{
     padding: 50px 100px;
 }
@@ -135,6 +156,10 @@ body{
     padding: 20px;
     margin: 0 100px;
 }
+.page-margin{
+    margin-bottom: 5%;
+    min-width: 40em;
+}
 .carousel-container-portrait {
     padding: 0 20px;
 width: 30%;
@@ -160,7 +185,7 @@ width: 30%;
         padding: 50px 25px;
     }
     .page-margin{
-        margin-bottom:75%;
+        margin-bottom:50%;
     }
     .page-content {
         display: flex;
@@ -180,6 +205,10 @@ width: 30%;
         flex-direction: column;
         padding: 25px;
         margin: 0;
+    }
+    .passwordPage {
+
+        transform:scale(1.25);
     }
     .carousel-container-landscape {
         width: 100%;

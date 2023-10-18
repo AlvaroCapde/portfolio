@@ -31,7 +31,7 @@ const portraits  = [
 
 const Home = () => {
     return (
-        <div style={{marginBottom:'20%', marginTop: '10%'}}>
+        <div className="page-margin" style={{marginTop: '5%'}}>
             <NavBar></NavBar>
             <h1 className="page-title">Image Carousel Example</h1>
             <div className="page-content">
@@ -71,9 +71,7 @@ const Home = () => {
             </div>
 
 
-            <div className='footer-fixed'>
-                <Footer />
-            </div>
+
         </div>
     );
 };
