@@ -113,7 +113,7 @@ color: black;
         background-color:white;
         flex-direction: column;
         padding: 10% 10px;
-        width: 60%;
+        max-width: 60%;
         transition: all 0.5s ease;
         transform:translate(100%, 0);
         z-index: 100;
@@ -127,7 +127,7 @@ color: black;
 
     .nav-bar-btns.opened{
         transform:translate(0,0);
-
+        padding-right:5%;
         padding-left:50px;
         
 
@@ -142,8 +142,9 @@ color: black;
         display: block;
     }
     .nav-bar .icon-close{
-        margin-top:-70px;
-        right:-70px;
+        position:absolute;
+        top:10px;
+        right:70px;
         z-index: 1000;
     }
     .submenu-content {
@@ -158,6 +159,7 @@ color: black;
         align-items: left;
         border-radius: 10px;
         text-align: left;
+
         padding-bottom:0;
     }
     .navbar-flexColumn{

@@ -45,7 +45,7 @@ export default class NavBar extends Component {
         const { scrollToTop } = this.state;
 
         return (
-            <div className='nav-bar page-title-navbar'>
+            <div className='nav-bar page-title-navbar drop-shadow-2xl'>
                 <a href="/manuel/home"><img src="/logo.png" className="nav-bar-img" alt="Logo" /></a>
                 <div className={`nav-bar-btns ${this.state.openedMenu ? 'opened' : ''}`}>
                     <IconButton className='menu-icon icon-close' onClick={this.handleMainMenuClick} disableRipple>

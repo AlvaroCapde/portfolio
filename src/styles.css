@@ -140,6 +140,7 @@ body{
     color: #333;
     text-align: center;
     text-transform: uppercase;
+    margin:0 100px;
 }
 
 .page-subtitle {
@@ -174,10 +175,19 @@ body{
     padding: 20px;
     margin: 0 100px;
 }
+.about-me-info{
+    margin: 50px 15%;
+    justify-content:space-between !important;
+    transform: scale(1.25);
+
+}
+.info-page{
+    align-items: flex-start !important;
+}
 .page-margin{
     margin-bottom: 5%;
     min-width: 40em;
-    margin-top:10%;
+    margin-top:200px;
 
 }
 
@@ -203,6 +213,9 @@ width: 30%;
 }
 .resume-text{
     font-size:24px;
+}
+.about-me-text{
+    font-size:36px;
 }
 @media screen and (max-width: 40em) {
     .body-padding{
