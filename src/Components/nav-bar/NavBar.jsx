@@ -45,8 +45,10 @@ export default class NavBar extends Component {
         const { scrollToTop } = this.state;
 
         return (
-            <div className='nav-bar page-title nav-bar-text '>
-                <a href="/manuel"><img src="/eee.png" className="nav-bar-img"></img></a>
+
+            <div className='nav-bar page-title-navbar  '>
+
+                <a href="/manuel/about"><img src="/logo.png" className="nav-bar-img"></img></a>
                 <div className={`nav-bar-btns ${this.state.openedMenu ? 'opened' : ''}`}>
                     <IconButton className='menu-icon icon-close' onClick={this.handleMainMenuClick} disableRipple>
                         <CloseSharp />
@@ -56,20 +58,29 @@ export default class NavBar extends Component {
                         <SubMenu>
 
                         <div className='submenu-content'>
-   <a href="/manuel/animation/weddings" className='submenu-element'>Weddings</a>
-   <br />
-   <a href="/manuel/animation/conferences" className='submenu-element'>Conferences</a>
-</div>
+                            <br />
+   <a href="/manuel/photography/weddings" >Weddings</a>
+                            <br />
+                            <br />
+   <a href="/manuel/photography/conferences" >Conferences</a>
+
+                            <br />
+                            <br />
+                            <a href="/manuel/photography/portraits" >Portraits</a>
+                </div>
 
                         </SubMenu>
                     </NavBarBtn>
-                    <NavBarBtn label="Animation" hasSubMenu disableRipple>
+                    <NavBarBtn label="Animation" hasSubMenu disableRipple >
                         <SubMenu disableRipple>
                         <div className='submenu-content'>
-                        <a href="/manuel/animation/weddings" className='submenu-element'>Weddings</a>
+                            <br />
+                        <a href="/manuel/animation/renders"  >Renders</a>
                         <br />
-                        <a href="/manuel/animation/conferences" className='submenu-element'>Conferences</a>
+                            <br />
+                        <a href="/manuel/animation/drawings" >Drawings</a>
                         </div>
+
                         </SubMenu>
                     </NavBarBtn>
                   

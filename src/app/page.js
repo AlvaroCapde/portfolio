@@ -43,7 +43,7 @@ export default function Home() {
                     <div className="flex flex-col items-center">
                         <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}
                             <a
-                                href="/manuel"
+                                href="/manuel/about"
                                 className="bg-slate-500 rounded-full block  w-full h-full"
                                 style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
                             ></a>

@@ -9,7 +9,7 @@ const ImageCarousel = ({ images }) => {
         const interval = setInterval(() => {
             // Increment the current index to move to the next slide
             setCurrentIndex((currentIndex + 1) % images.length);
-        }, 1000); // 5000 milliseconds = 5 seconds
+        }, 5000); // 5000 milliseconds = 5 seconds
 
         return () => {
             clearInterval(interval);
@@ -23,7 +23,6 @@ const ImageCarousel = ({ images }) => {
             selectedItem={currentIndex}
             onChange={setCurrentIndex}
             autoPlay={true}
-            interval={5000}
             infiniteLoop={true} // Enable seamless looping
             transitionTime={0} // Set transition time to 0 to avoid animations between images
         >

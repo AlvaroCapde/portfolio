@@ -28,7 +28,7 @@ const PasswordProtectedPage = ({ correctPassword }) => {
 
     return (
         <div
-            className={"passwordPage"}
+            className="passwordPage"
         >
             <div className="flexColumn h-screen">
                 <h1 className="text-2xl font-semibold mb-4">Insert Password:</h1>
@@ -39,7 +39,7 @@ const PasswordProtectedPage = ({ correctPassword }) => {
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="rounded-lg px-6 py-3"
+                        className="rounded-lg px-6 py-3 stdInput"
                     />
 
                     <button className="stdButton" type="submit">
