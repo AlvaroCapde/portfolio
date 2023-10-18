@@ -3,14 +3,15 @@
     top: 0;
     left: 0;
     width:100%;
-    height:50px;
+    height:75px;
     padding: 15px 10%;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-
+    background-color:white;
+    
 }
 .nav-bar h1{
     margin: 0;
@@ -19,19 +20,27 @@
 .nav-bar .nav-bar-btns{
     display: flex;
     text-align: center;
+    align-items: center;
 }
 .nav-bar .nav-bar-btn {
     color: rgba(0, 0, 0, 1);
-    margin: 10px 25px;
-
+    margin: 10px 20px;
+    
+    
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     position: relative;
-    outline: none; /* Add this line to remove the focus outline */
-    width: 100px; /* Adjust the width as needed */
+    outline: none;
+
 }
 .nav-bar .nav-bar-btn:hover{
     color: rgba(150, 150, 150, 1);
+}
+.nav-bar-btn span {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-bar svg{
     color: black;
@@ -39,22 +48,23 @@
 .nav-bar .menu-icon{
     display: none;
 }
-.submenu-content {
-    position: absolute;
-    top: 100%; /* Position it below the main menu element */
-
-    left: 50%; /* Horizontally center it */
-    transform: translateX(-50%); /* Center it horizontally */
+.menu-icon {
     display: none;
-    background-color: rgba(25, 25, 25, .5);
+  }
+.submenu-content {
+    position: relatvie;
+    top: 10px; 
 
-
+    display: none;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    text-align:center;
+    justify-content: center;
+
 }
+
 .submenu-content .submenu-content-bg {
-color: white;
+color: black;
 
 }
 .nav-bar-btn.hovered .submenu-content {
@@ -63,9 +73,13 @@ color: white;
 .home-icon{
     margin-top:20px;
 }
+.nav-bar-img{
+    height:45px;
+}
 
 @media screen and (max-width: 40em) {
 
+    
     .nav-bar{
         background-color:white;
 
@@ -75,36 +89,43 @@ color: white;
         margin: 10px 25px;
         text-align: left;
         cursor: pointer;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
         position: relative;
-        outline: none; /* Add this line to remove the focus outline */
-        width: 100px; /* Adjust the width as needed */
+        outline: none;
+        width: 100px;
     }
     .nav-bar-btns{
         position: fixed;
         height: 100vh;
-        background-color: black;
+        margin:0;
         top: 0;
         right:0;
         text-align: left;
         background-color:white;
         flex-direction: column;
         padding: 10% 10px;
-        min-width: 60%;
-        transition: all 1s ease;
+        width: 60%;
+        transition: all 0.5s ease;
         transform:translate(100%, 0);
         z-index: 100;
-
+        padding-top:15%;
 
     }
+    
+.center-elements{
+    text-align: right;
+}
+
     .nav-bar-btns.opened{
         transform:translate(0,0);
-
+        align-items: left;
+        padding-left:50px;
+        
 
     }
     .nav-bar .nav-bar-btn{
         width: 100%;
-        padding: 0 20%;
+
         margin: 20px 0;
         color:black;
     }
@@ -112,25 +133,31 @@ color: white;
         display: block;
     }
     .nav-bar .icon-close{
-        top: -40px;
-        right:-100px;
+        margin-top:-50px;
+        right:-90px;
+        z-index: 1000;
     }
     .submenu-content {
         position: relative;
-        top: 0; /* Position it below the main menu element */
+        top: 0;
+
         margin-top:10px;
-        text-align: left;
-
-        display: block; /* Change this from display: none; to display: block; */
-        background-color: rgba(25, 25, 25, 0);
-
+        margin-bottom:15px;
+        display: block;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         border-radius: 10px;
+        text-align: left;
     }
-    .submenu-content .submenu-content-bg {
-        color: black;
+    .navbar-flexColumn{
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
 
-    }
+      
+
 }
 
