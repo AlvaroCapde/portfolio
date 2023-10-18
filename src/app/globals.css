@@ -16,7 +16,9 @@
   }
 }
 
-
+body {
+  background: conic-gradient(at 102% center, rgb(219, 231, 280), rgb(79, 94, 115), rgb(219, 231, 280));
+}
 
 .spin-animate{
     animation-name: spin;

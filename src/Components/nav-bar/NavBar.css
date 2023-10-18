@@ -3,14 +3,14 @@
     top: 0;
     left: 0;
     width:100%;
-    height:75px;
+    height:50px;
     padding: 15px 10%;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    background-color:white;
+
 }
 .nav-bar h1{
     margin: 0;
@@ -22,14 +22,13 @@
 }
 .nav-bar .nav-bar-btn {
     color: rgba(0, 0, 0, 1);
-    margin: 10px 0;
-
+    margin: 10px 25px;
 
     cursor: pointer;
     transition: all 0.5s ease;
     position: relative;
-    outline: none;
-    width: 100px;
+    outline: none; /* Add this line to remove the focus outline */
+    width: 100px; /* Adjust the width as needed */
 }
 .nav-bar .nav-bar-btn:hover{
     color: rgba(150, 150, 150, 1);
@@ -42,12 +41,12 @@
 }
 .submenu-content {
     position: absolute;
-    top: 100%;
+    top: 100%; /* Position it below the main menu element */
 
-    left: 50%;
-    transform: translateX(-50%);
+    left: 50%; /* Horizontally center it */
+    transform: translateX(-50%); /* Center it horizontally */
     display: none;
-    background-color: rgba(252, 252, 255, 1);
+    background-color: rgba(25, 25, 25, .5);
 
 
     flex-direction: column;
@@ -55,7 +54,7 @@
     border-radius: 10px;
 }
 .submenu-content .submenu-content-bg {
-color: black;
+color: white;
 
 }
 .nav-bar-btn.hovered .submenu-content {
@@ -78,13 +77,13 @@ color: black;
         cursor: pointer;
         transition: all 0.5s ease;
         position: relative;
-        outline: none;
-        width: 100px;
+        outline: none; /* Add this line to remove the focus outline */
+        width: 100px; /* Adjust the width as needed */
     }
     .nav-bar-btns{
         position: fixed;
         height: 100vh;
-
+        background-color: black;
         top: 0;
         right:0;
         text-align: left;
@@ -98,10 +97,10 @@ color: black;
 
 
     }
-
-
     .nav-bar-btns.opened{
         transform:translate(0,0);
+
+
     }
     .nav-bar .nav-bar-btn{
         width: 100%;
@@ -118,11 +117,11 @@ color: black;
     }
     .submenu-content {
         position: relative;
-        top: 0;
+        top: 0; /* Position it below the main menu element */
         margin-top:10px;
-
         text-align: left;
-        display: block;
+
+        display: block; /* Change this from display: none; to display: block; */
         background-color: rgba(25, 25, 25, 0);
 
         flex-direction: column;
