@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width:100%;
-    height:75px;
+    height:150px;
     padding: 15px 10%;
     color: black;
     display: flex;
@@ -78,17 +78,19 @@ color: black;
 }
 .nav-bar-img{
    width:100%;
-    max-height: 45px;
+    max-height: 75px;
 }
 
 @media screen and (max-width: 65em) {
 
     .nav-bar-img{
         height:40px;
+        justify-content: center;
     }
     
     .nav-bar{
         background-color:white;
+        height:75px;
 
     }
     .nav-bar .nav-bar-btn {

@@ -31,7 +31,7 @@ function App() {
 
     return (
         <div className="App page-margin" style={{marginTop: '5%' }}>
-            <LoadingScreen/>
+
             <NavBar />
             <div className="body-padding">
                 <h1 className="page-title">Scalable Photo Gallery</h1>

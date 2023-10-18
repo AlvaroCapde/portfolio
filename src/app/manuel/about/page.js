@@ -44,7 +44,10 @@ const Home = () => {
                     <br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo mi. Donec at lacinia erat, at posuere neque. Duis lacinia metus non erat auctor, eu auctor metus sollicitudin.</p>
                     <p>Proin euismod velit ut metus pellentesque, id dapibus ex rhoncus. In bibendum turpis non auctor lacinia. Nulla ac augue eget elit malesuada feugiat. Nullam eleifend, orci non laoreet sodales, metus sem bibendum tellus, eu cursus quam ex a justo. Donec euismod bibendum enim, nec interdum dui.</p>
+                    <br/>
+                    <a href="/manuel/photography/weddings" className="page-subtitle flexColumn see-more-link">See more...</a>
                 </div>
+
             </div>
             <div className="page-content">
                 <div className="carousel-container-landscape">
@@ -55,6 +58,8 @@ const Home = () => {
                     <br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo mi. Donec at lacinia erat, at posuere neque. Duis lacinia metus non erat auctor, eu auctor metus sollicitudin.</p>
                     <p>Proin euismod velit ut metus pellentesque, id dapibus ex rhoncus. In bibendum turpis non auctor lacinia. Nulla ac augue eget elit malesuada feugiat. Nullam eleifend, orci non laoreet sodales, metus sem bibendum tellus, eu cursus quam ex a justo. Donec euismod bibendum enim, nec interdum dui.</p>
+                    <br/>
+                    <a href="/manuel/photography/conferences" className="page-subtitle flexColumn see-more-link">See more...</a>
                 </div>
 
             </div>
@@ -67,6 +72,8 @@ const Home = () => {
                     <br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo mi. Donec at lacinia erat, at posuere neque. Duis lacinia metus non erat auctor, eu auctor metus sollicitudin.</p>
                     <p>Proin euismod velit ut metus pellentesque, id dapibus ex rhoncus. In bibendum turpis non auctor lacinia. Nulla ac augue eget elit malesuada feugiat. Nullam eleifend, orci non laoreet sodales, metus sem bibendum tellus, eu cursus quam ex a justo. Donec euismod bibendum enim, nec interdum dui.</p>
+                    <br/>
+                    <a href="/manuel/photography/portraits" className="page-subtitle flexColumn see-more-link">See more...</a>
                 </div>
             </div>
 

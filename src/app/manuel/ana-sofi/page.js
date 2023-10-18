@@ -98,10 +98,14 @@ function App() {
 
     return (
         <div>
-
+            <LoadingScreen></LoadingScreen>
+            <PasswordProtectedPage correctPassword="anasofi9923" />
 
             <div className="App page-margin" style={{ marginTop: '5%', }}>
-                <Downloads></Downloads>
+                <Downloads
+                    downloadLink="/clients/Ana_Sofi/Ana_Sofi.zip"
+                    slideshowLink="https://drive.google.com/file/u/1/d/1i3TMtZvKoPyCvX7yNAETWTq3KFlGUee5/view?usp=sharing"
+                />
                 <NavBar></NavBar>
                 <div className="body-padding">
                 <h1 className="page-title">Ana Sofi</h1>

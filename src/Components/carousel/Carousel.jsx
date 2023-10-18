@@ -18,13 +18,14 @@ const ImageCarousel = ({ images }) => {
 
     return (
         <Carousel
-            showArrows={true}
+
             showThumbs={false}
             selectedItem={currentIndex}
             onChange={setCurrentIndex}
             autoPlay={true}
-            infiniteLoop={true} // Enable seamless looping
-            transitionTime={0} // Set transition time to 0 to avoid animations between images
+            infiniteLoop={true}
+            showArrows={false}
+            transitionTime={1000}
         >
             {images.map((image, index) => (
                 <div key={index}>

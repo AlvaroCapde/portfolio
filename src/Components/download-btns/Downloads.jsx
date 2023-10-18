@@ -1,14 +1,19 @@
 import React from 'react';
-
 import '../../styles.css';
 
-function ButtonContainer() {
+function Downloads(props) {
+    const { downloadLink, slideshowLink } = props;
+
     return (
-        <div className="button-container flex-row">
-            <button className="top-right-button stdButton">Download all photos</button>
-            <button className="top-right-button stdButton">Watch slideshow</button>
+        <div className="button-container flex-row page-margin ">
+            <a href={downloadLink} className="top-right-button stdButton" download>
+                DOWNLOAD ALL PHOTOS
+            </a>
+            <a href={slideshowLink} className="top-right-button stdButton">
+                WATCH SLIDESHOW
+            </a>
         </div>
     );
 }
 
-export default ButtonContainer;
+export default Downloads;
