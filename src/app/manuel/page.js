@@ -3,8 +3,10 @@ import React from 'react';
 import ImageCarousel from "@/Components/carousel/Carousel";
 import NavBar from "@/Components/nav-bar/NavBar";
 import Footer from "@/Components/footer/Footer";
+import Head from 'next/head';
 
 import '../../styles.css';
+
 
 const showcase = [
     "/showcase/showcase_01.jpg",
@@ -17,6 +19,9 @@ const showcase = [
 const Home = () => {
     return (
         <div className="page-margin" >
+            <Head>
+                Manu Solano
+            </Head>
             <NavBar/>
             <h1 className="main-title">Manuel fernando solano olivares</h1>
             <div className="page-content">

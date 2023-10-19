@@ -1,134 +1,104 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import './NavBar.css';
-import { IconButton, Menu, MenuItem } from '@mui/material';
+import { IconButton } from '@mui/material';
 import { CloseSharp, MenuSharp, Add } from '@mui/icons-material';
 import '../../styles.css';
 
-export default class NavBar extends Component {
-    constructor(props) {
-        super(props);
+export default function NavBar() {
+    const [scrollToTop, setScrollToTop] = useState(0);
+    const [openedMenu, setOpenedMenu] = useState(false);
 
-        let maxHeight = 0;
-        let scrollToTop = 0;
-
-        if (typeof window !== 'undefined') {
-            maxHeight = window.innerHeight - 50;
-            scrollToTop = (Math.min(window.scrollY, maxHeight) / maxHeight);
-        }
-
-        this.state = {
-            scrollToTop: scrollToTop,
-            openedMenu: false, // for the main menu
+    useEffect(() => {
+        const onScroll = () => {
+            const maxHeight = window.innerHeight - 50;
+            const scrollTotop = Math.min(window.scrollY, maxHeight) / maxHeight;
+            setScrollToTop(scrollTotop);
         };
-        this.onScroll = this.onScroll.bind(this);
-    }
 
-    onScroll() {
-        const maxHeight = window.innerHeight - 50;
-        const scrollTotop = (Math.min(window.scrollY, maxHeight) / maxHeight);
-        this.setState({ scrollToTop: scrollTotop });
-    }
+        document.addEventListener('scroll', onScroll);
 
-    componentDidMount() {
-        document.addEventListener('scroll', this.onScroll);
-    }
+        return () => {
+            document.removeEventListener('scroll', onScroll);
+        };
+    }, []);
 
-    componentWillUnmount() {
-        document.removeEventListener('scroll', this.onScroll);
-    }
+    const handleMainMenuClick = () => {
+        setOpenedMenu(!openedMenu);
+    };
 
-    handleMainMenuClick = () => {
-        this.setState({ openedMenu: !this.state.openedMenu });
-    }
-
-    render() {
-        const { scrollToTop } = this.state;
-
-        return (
-            <div className='nav-bar page-title-navbar drop-shadow-2xl'>
-                <a href="/manuel"><img src="/logo.png" className="nav-bar-img" alt="Logo" /></a>
-                <div className={`nav-bar-btns ${this.state.openedMenu ? 'opened' : ''}`}>
-                    <IconButton className='menu-icon icon-close' onClick={this.handleMainMenuClick} disableRipple>
-                        <CloseSharp />
-                    </IconButton>
-                    <NavBarBtn label="Photography" href="/manuel/photography/" hasSubMenu disableRipple>
-
-                        <SubMenu>
-                            <div className='submenu-content submenu-drop-shadow'>
-                                <br />
-                                <a href="/manuel/photography/weddings">Weddings</a>
-                                <br />
-                                <br />
-                                <a href="/manuel/photography/conferences">Conferences</a>
-                                <br />
-                                <br />
-                                <a href="/manuel/photography/portraits">Portraits</a>
-                            </div>
-                        </SubMenu>
-                    </NavBarBtn>
-                    <NavBarBtn label="Animation" hasSubMenu disableRipple>
-                        <SubMenu disableRipple>
-                            <div className='submenu-content submenu-drop-shadow'>
-                                <br />
-                                <a href="/manuel/animation/renders">Renders</a>
-
-                            </div>
-                        </SubMenu>
-                    </NavBarBtn>
-                    <NavBarBtn label="Contact" className="no-hover" href="/manuel/contact/" disableRipple></NavBarBtn>
-                </div>
-                <IconButton className='menu-icon' onClick={this.handleMainMenuClick} disableRipple>
-                    <MenuSharp />
+    return (
+        <div className='nav-bar page-title-navbar drop-shadow-2xl'>
+            <a href="/manuel"><img src="/logo.png" className="nav-bar-img" alt="Logo" /></a>
+            <div className={`nav-bar-btns ${openedMenu ? 'opened' : ''}`}>
+                <IconButton className='menu-icon icon-close' onClick={handleMainMenuClick} disableRipple>
+                    <CloseSharp />
                 </IconButton>
+                <NavBarBtn label="Photography" href="/manuel/photography/" hasSubMenu disableRipple>
+                    <SubMenu>
+                        <div className='submenu-content submenu-drop-shadow'>
+                            <br />
+                            <a href="/manuel/photography/weddings">Weddings</a>
+                            <br />
+                            <br />
+                            <a href="/manuel/photography/conferences">Conferences</a>
+                            <br />
+                            <br />
+                            <a href="/manuel/photography/portraits">Portraits</a>
+                        </div>
+                    </SubMenu>
+                </NavBarBtn>
+                <NavBarBtn label="Animation" hasSubMenu disableRipple>
+                    <SubMenu disableRipple>
+                        <div className='submenu-content submenu-drop-shadow'>
+                            <br />
+                            <a href="/manuel/animation/renders">Renders</a>
+                        </div>
+                    </SubMenu>
+                </NavBarBtn>
+                <NavBarBtn label="Contact" className="no-hover" href="/manuel/contact/" disableRipple></NavBarBtn>
             </div>
-        );
-    }
+            <IconButton className='menu-icon' onClick={handleMainMenuClick} disableRipple>
+                <MenuSharp />
+            </IconButton>
+        </div>
+    );
 }
 
-class NavBarBtn extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isHovered: false,
-            expanded: false,
-        };
+function NavBarBtn(props) {
+    const [isHovered, setIsHovered] = useState(false);
+    const [expanded, setExpanded] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
     }
 
-    handleMouseEnter = () => {
-        this.setState({ isHovered: true });
+    const handleMouseLeave = () => {
+        setIsHovered(false);
     }
 
-    handleMouseLeave = () => {
-        this.setState({ isHovered: false });
+    const handleSubMenuClick = () => {
+        setExpanded(!expanded);
     }
 
-    handleSubMenuClick = () => {
-        this.setState({ expanded: !this.state.expanded });
-    }
+    const { label, children, hasSubMenu } = props;
+    const isNarrowScreen = typeof window !== 'undefined' && window.innerWidth < 40 * 16;
 
-    render() {
-        const { label, children, hasSubMenu } = this.props;
-        const { isHovered, expanded } = this.state;
-
-        const isNarrowScreen = window.innerWidth < 40 * 16;
-
-        return (
-            <a href={this.props.href} className={`nav-bar-btn ${isHovered ? 'hovered' : ''}`} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-                {label || children}
-                {hasSubMenu && isNarrowScreen && (
-                    <IconButton className="submenu-toggle" onClick={this.handleSubMenuClick}>
-                        {expanded ? <CloseSharp /> : <Add disableRipple />}
-                    </IconButton>
-                )}
-                {children && expanded && (
-                    <div className="submenu-content">{children}</div>
-                )}
-                {isHovered && children && !isNarrowScreen && (
-                    <div className="submenu-content">{children}</div>
-                )}
-            </a>
-        );
-    }
+    return (
+        <a href={props.href} className={`nav-bar-btn ${isHovered ? 'hovered' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            {label || children}
+            {hasSubMenu && isNarrowScreen && (
+                <IconButton className="submenu-toggle" onClick={handleSubMenuClick}>
+                    {expanded ? <CloseSharp /> : <Add disableRipple />}
+                </IconButton>
+            )}
+            {children && expanded && (
+                <div className="submenu-content">{children}</div>
+            )}
+            {isHovered && children && !isNarrowScreen && (
+                <div className="submenu-content">{children}</div>
+            )}
+        </a>
+    );
 }
 
 function SubMenu({ children }) {

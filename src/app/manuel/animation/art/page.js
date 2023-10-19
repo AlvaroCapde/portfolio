@@ -4,9 +4,10 @@ import React from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
 import Footer from "@/Components/footer/Footer";
 import PasswordProtectedPage from "@/Components/password/PasswordProtectedPage";
-import Gallery from "@/Components/Gallery/Gallery";
+import Gallery from "@/Components/gallery/Gallery";
 
 import '../../../../styles.css';
+import {LoadingScreen} from "@/Components/LoadingScreen";
 
 const images = [
     "/weddingPhotos/Bodas.jpg",
@@ -44,6 +45,7 @@ const images = [
 function App() {
     return (
         <div className="App page-margin">
+            <LoadingScreen/>
             <NavBar />
             <div className="body-padding">
                 <h1 className="main-title">art</h1>
