@@ -20,6 +20,11 @@ body {
   background: conic-gradient(at 102% center, rgb(219, 231, 280), rgb(79, 94, 115), rgb(219, 231, 280));
 }
 
+.alvaro-container {
+    /* TODO: Decide if proximity or mandatory */
+    @apply  m-0 p-0 relative h-full overflow-x-hidden overflow-y-scroll snap-y snap-mandatory overscroll-y-contain;
+}
+
 .spin-animate{
     animation-name: spin;
     animation-duration: 5000ms;
