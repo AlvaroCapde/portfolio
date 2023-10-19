@@ -26,7 +26,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center">
                     <LoadingScreen/>
                 <h1 className='text-slate-400 text-5xl font-extrabold mb-20'>EPIC RESUMES</h1>
-                    <div className="flex items-center">
+                    <div className="flex flex-col md:flex-row justify-center items-center">
                         <div className='text-center'>
                         <div className="m-10" style={{ width: '300px', height: '300px' }}>
                             <a
