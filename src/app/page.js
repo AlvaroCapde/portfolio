@@ -26,37 +26,23 @@ export default function Home() {
     return (
 
         <main className="flex min-h-screen items-center justify-center p-24">
-            <a href="../../../galeria-fotos/src/photoGallery.js" className="text-blue-400">redirect</a>
             <div className="flex flex-col items-center justify-center">
-                {loading ? (
-                    result ? (
-                        <div className="text-center">
-                            <div className={`text-5xl font-bold ${result === 'success' ? 'text-green-700' : 'text-red-600'}`}>
-                                {result === 'success' ? 'Resumes loaded with success!' : 'Failed to load resumes'}
-                            </div>
-                            <button onClick={beginLoading} className="bg-slate-500 rounded-full px-6 py-4 text-white font-bold">Reload</button>
-                        </div>
-                    ) : (
-                        <LoadingScreen />
-                    )
-                ) : (
                     <div className="flex flex-col items-center">
                         <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}
-                            <button
-                                onClick={beginLoading}
-                                className="bg-slate-500 rounded-full w-full h-full"
+                            <a
+                                href="/manuel"
+                                className="bg-slate-500 rounded-full block w-full h-full"
                                 style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
-                            ></button>
+                            ></a>
                         </div>
                         <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}
-                            <button
-                                onClick={beginLoading}
-                                className="bg-slate-500 rounded-full w-full h-full"
+                            <a
+                                href="/alvaro"
+                                className="bg-slate-500 rounded-full block w-full h-full"
                                 style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
-                            ></button>
+                            ></a>
                         </div>
                     </div>
-                )}
             </div>
             <Footer />
         </main>
