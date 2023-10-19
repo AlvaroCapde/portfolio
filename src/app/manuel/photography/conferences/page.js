@@ -30,16 +30,11 @@ images = [
 function App() {
 
     return (
-        <div className="App page-margin" style={{marginTop: '5%' }}>
+        <div className="App page-margin">
 
             <NavBar />
-            <div className="body-padding">
-                <h1 className="page-title">Scalable Photo Gallery</h1>
-                <br />
-
-
-            </div>
-            <Gallery photos={images} /> {/* Use the Gallery component with wedding photos */}
+            <h1 className="main-title">conferences</h1>
+            <Gallery photos={images} />
 
         </div>
     );

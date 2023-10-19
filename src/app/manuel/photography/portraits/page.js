@@ -23,13 +23,9 @@ const images = [
 
 function App() {
     return (
-        <div className="App page-margin" style={{marginTop: '5%' }}>
+        <div className="App page-margin" >
             <NavBar />
-            <div className="body-padding">
-                <h1 className="page-title">Scalable Photo Gallery</h1>
-                <br />
-                {/* Your text content */}
-            </div>
+            <h1 className="main-title">portraits</h1>
             <Gallery photos={images} /> {/* Use the Gallery component with wedding photos */}
 
 

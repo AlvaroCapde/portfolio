@@ -1,11 +1,7 @@
 'use client'
 import {useCallback, useState} from "react";
 import {LoadingScreen} from "@/Components/LoadingScreen";
-import { useRouter } from 'next/router';
-import NavBar from "@/Components/nav-bar/NavBar";
-import footer from "@/Components/footer/Footer";
-import Footer from "@/Components/footer/Footer";
-import Link from 'next/link';
+import '../styles.css';
 
 
 export default function Home() {
@@ -26,7 +22,7 @@ export default function Home() {
     return (
 
         <main className="flex min-h-screen items-center justify-center p-24">
-            <a href="../../../galeria-fotos/src/photoGallery.js" className="text-blue-400">redirect</a>
+
             <div className="flex flex-col items-center justify-center">
                 {loading ? (
                     result ? (
@@ -43,9 +39,9 @@ export default function Home() {
                     <div className="flex flex-col items-center">
                         <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}
                             <a
-                                href="/manuel/home"
+                                href="/manuel"
                                 className="bg-slate-500 rounded-full block  w-full h-full"
-                                style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
+                                style={{ backgroundImage: 'url("/Manuel_Solano_Foto.jpg")', backgroundSize: 'cover' }}
                             ></a>
                         </div>
                         <div className="m-10" style={{ width: '300px', height: '300px' }}> {/* Adjust the width and height as needed */}

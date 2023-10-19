@@ -46,14 +46,15 @@ export default class NavBar extends Component {
 
         return (
             <div className='nav-bar page-title-navbar drop-shadow-2xl'>
-                <a href="/manuel/home"><img src="/logo.png" className="nav-bar-img" alt="Logo" /></a>
+                <a href="/manuel"><img src="/logo.png" className="nav-bar-img" alt="Logo" /></a>
                 <div className={`nav-bar-btns ${this.state.openedMenu ? 'opened' : ''}`}>
                     <IconButton className='menu-icon icon-close' onClick={this.handleMainMenuClick} disableRipple>
                         <CloseSharp />
                     </IconButton>
-                    <NavBarBtn label="Photography" hasSubMenu disableRipple>
+                    <NavBarBtn label="Photography" href="/manuel/photography/" hasSubMenu disableRipple>
+
                         <SubMenu>
-                            <div className='submenu-content'>
+                            <div className='submenu-content submenu-drop-shadow'>
                                 <br />
                                 <a href="/manuel/photography/weddings">Weddings</a>
                                 <br />
@@ -67,12 +68,10 @@ export default class NavBar extends Component {
                     </NavBarBtn>
                     <NavBarBtn label="Animation" hasSubMenu disableRipple>
                         <SubMenu disableRipple>
-                            <div className='submenu-content'>
+                            <div className='submenu-content submenu-drop-shadow'>
                                 <br />
                                 <a href="/manuel/animation/renders">Renders</a>
-                                <br />
-                                <br />
-                                <a href="/manuel/animation/drawings">Drawings</a>
+
                             </div>
                         </SubMenu>
                     </NavBarBtn>

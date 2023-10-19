@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
 import Footer from "@/Components/footer/Footer";
-import Gallery from "@/Components/Gallery/Gallery";
+import Gallery from "@/Components/gallery/Gallery";
 import Downloads from "@/Components/download-btns/Downloads";
 
 import PasswordProtectedPage from "@/Components/password/PasswordProtectedPage";
 
-import '../../../styles.css';
+import '../../../../styles.css';
 import {LoadingScreen} from "@/Components/LoadingScreen";
 
 let images;

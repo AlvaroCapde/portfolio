@@ -10,25 +10,25 @@ function Contact() {
     return (
         <div>
             <NavBar></NavBar>
-            <div className="flexColumn h-screen center-margin">
-                <h1 className="page-title">Contact Information</h1>
+            <div className="flexColumn h-full page-margin">
+                <h1 className="main-title">Contact Information</h1>
                 <table className="contact-table">
-                    <tbody>
+                    <tbody >
                     <tr>
-                        <td><strong>Phone Number:</strong></td>
-                        <td>+1 (123) 456-7890</td>
+                        <td className="t-l-c page-title"><strong>Phone Number:</strong></td>
+                        <td className="t-r-c page-title">+52 33 1252-8701</td>
                     </tr>
                     <tr>
-                        <td><strong>Email:</strong></td>
-                        <td>contact@example.com</td>
+                        <td className="page-title"><strong>Email:</strong></td>
+                        <td className="page-title">info@manusolano.com</td>
                     </tr>
                     <tr>
-                        <td><strong>Website:</strong></td>
-                        <td><a href="https://www.example.com">www.example.com</a></td>
+                        <td className=" page-title"><strong>Website:</strong></td>
+                        <td className="page-title"><a href="https://www.example.com">www.manusolano.com</a></td>
                     </tr>
                     <tr>
-                        <td><strong>Instagram:</strong></td>
-                        <td><a href="https://www.instagram.com/example">Instagram</a></td>
+                        <td className="b-l-c page-title"><strong>Instagram:</strong></td>
+                        <td className="b-r-c page-title"><a href="https://www.instagram.com/manusolano.photography">Instagram</a></td>
                     </tr>
                     </tbody>
                 </table>

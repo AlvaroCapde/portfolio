@@ -1,3 +1,5 @@
+
+
 .nav-bar{
     position: fixed;
     top: 0;
@@ -11,7 +13,7 @@
     align-items: center;
     z-index: 10;
     background-color:white;
-    
+
 }
 .page-title-navbar {
     font-size: 22px;
@@ -37,7 +39,7 @@
 
 }
 .nav-bar .nav-bar-btn:hover{
-    color: rgba(150, 150, 150, 1);
+    color: rgba(80, 80, 80, 1);
 }
 .nav-bar-btn span {
 
@@ -64,6 +66,10 @@
     flex-direction: column;
     text-align: center;
     padding-bottom:20px;
+
+}
+.submenu-drop-shadow{
+    @apply drop-shadow-2xl;
 }
 
 .submenu-content .submenu-content-bg {
@@ -81,17 +87,17 @@ color: black;
     max-height: 75px;
 }
 
+
 @media screen and (max-width: 65em) {
 
     .nav-bar-img{
-        height:40px;
+        height:60px;
         justify-content: center;
     }
     
     .nav-bar{
         background-color:white;
-        height:75px;
-
+        width: 100%;
     }
     .nav-bar .nav-bar-btn {
         color: rgba(0, 0, 0, 1);
@@ -105,7 +111,7 @@ color: black;
     }
     .nav-bar-btns{
         position: fixed;
-        height: 100vh;
+        height: 200vh;
         margin:0;
         top: 0;
         right:0;
@@ -127,24 +133,25 @@ color: black;
 
     .nav-bar-btns.opened{
         transform:translate(0,0);
-        padding-right:5%;
+        padding-right:15%;
         padding-left:50px;
-        
+
 
     }
     .nav-bar .nav-bar-btn{
         width: 100%;
-
         margin: 20px 0;
         color:black;
+        margin-top:50px;
     }
     .nav-bar .menu-icon{
         display: block;
+        transform: scale(2);
     }
     .nav-bar .icon-close{
         position:absolute;
-        top:10px;
-        right:70px;
+        top:50px;
+        right:75px;
         z-index: 1000;
     }
     .submenu-content {

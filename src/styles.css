@@ -1,5 +1,7 @@
 .stdButton{
+    margin-top:50px;
     @apply bg-slate-600 rounded-lg px-6 py-3 text-white font-bold;
+    transform: scale(1.5);
 }
 .stdInput{
     @apply bg-slate-400 rounded-md px-6 py-3 text-black font-bold opacity-50 border border-slate-800;
@@ -93,7 +95,7 @@ button:disabled {
     z-index:1000;
     justify-content: center;
     align-items: center;
-    transform:scale(1.5);
+    transform:scale(1.25);
 }
 .loading-page {
     position: fixed;
@@ -105,10 +107,16 @@ button:disabled {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index:2500;
+    z-index: 2500;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.loading-page.active {
+    opacity: 1; 
 }
 body{
-    background: white;
+    background: conic-gradient(at 125% center, rgb(219, 231, 255), rgb(111, 127, 150), rgb(219, 231, 255));
 }
 
 .body-padding{
@@ -121,12 +129,7 @@ body{
     width: 100%;
     height: auto;
 }
-.contact-table {
-    width: 40%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: rgba(118, 135, 155, 0.37);
-}
+
 .page-title {
     font-size: 28px;
     font-weight: bold;
@@ -141,17 +144,19 @@ body{
     text-align: center;
     text-transform: uppercase;
     margin:0 100px;
+
 }
 
 .page-subtitle {
-    font-size: 20px;
+    font-size: 2em;
     font-weight: bold;
     color: #333;
     text-align: center;
     text-transform: uppercase;
 }
+
 .see-more-link{
-    font-size: 16px !important;
+    font-size: 20px !important;
 }
 
 .nav-bar-text{
@@ -160,10 +165,40 @@ body{
 .nav-bar-submenu-text{
     font-size:10px !important;
 }
-.contact-table td {
-    padding: 10px;
-    border: 1px solid rgb(101, 116, 140);
+.contact-table {
+    margin-top:150px;
+    border-radius: 60px;
+    background-color: rgba(108, 123, 150, 0.15);
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 50%;
+    line-height: 800%;
+    border: 10px solid rgba(80, 92, 107, 0.25);
 }
+
+.contact-table td {
+    border: 5px solid rgba(80, 92, 107, 0.25);
+}
+
+.b-l-c {
+    border-radius: 0 0  0 50px !important;
+}
+
+
+.b-r-c {
+    border-radius: 0 0 50px 0  !important;
+}
+
+
+.t-l-c {
+    border-radius: 50px 0 0 0 !important;
+}
+
+
+.t-r-c {
+    border-radius: 0 50px 0 0 !important;
+}
+
 .contact-table strong {
     font-weight: bold;
 }
@@ -181,8 +216,10 @@ body{
     transform: scale(1.25);
 
 }
+
 .info-page{
     align-items: flex-start !important;
+
 }
 .page-margin{
     margin-bottom: 5%;
@@ -211,6 +248,9 @@ width: 30%;
 
     justify-content:center;
 }
+.padding-separator{
+    padding: 0 100px !important;
+}
 .resume-text{
     font-size:24px;
 }
@@ -218,11 +258,14 @@ width: 30%;
     font-size:36px;
 }
 @media screen and (max-width: 40em) {
+    .main-title {
+        font-size: 3em;
+    }
     .body-padding{
         padding: 50px 25px;
     }
     .page-margin{
-        margin-top:10%;
+        margin-top:150px;
         margin-bottom:50%;
     }
     .page-content {
@@ -236,6 +279,10 @@ width: 30%;
 
 }
 @media screen and (max-width: 80em) {
+    .info-page{
+        align-items: center !important;
+        width:100%;
+    }
     .page-content {
         display: flex;
         align-items: center;
@@ -258,5 +305,6 @@ width: 30%;
 
     .text-content {
         width: 100%;
+        margin: 0 20%;
     }
 }

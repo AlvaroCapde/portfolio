@@ -45,8 +45,12 @@ function App() {
     return (
         <div className="App page-margin">
             <NavBar />
-            <h1 className="main-title">weddings</h1>
-            <Gallery photos={images} />
+            <div className="body-padding">
+                <h1 className="main-title">art</h1>
+                <br />
+                {/* Your text content */}
+            </div>
+            <Gallery photos={images} /> {/* Use the Gallery component with wedding photos */}
 
         </div>
     );

@@ -19,28 +19,26 @@ const conferences = [
 
 ];
 const portraits  = [
-"/portraitPhotos/Retrato_01.jpg",
+
     "/portraitPhotos/Retrato_02.jpg",
-    "/portraitPhotos/Retrato_03.jpg",
     "/portraitPhotos/Retrato_04.jpg",
-    "/portraitPhotos/Retrato_05.jpg",
     "/portraitPhotos/Retrato_06.jpg",
     "/portraitPhotos/Retrato_07.jpg",
-    "/portraitPhotos/Retrato_08.jpg",
 ];
 
 const Home = () => {
     return (
-        <div className="page-margin" style={{marginTop: '5%'}}>
+        <div className="page-margin" >
             <NavBar></NavBar>
-            <h1 className="page-title">Image Carousel Example</h1>
+            <h1 className="main-title">photography</h1>
             <div className="page-content">
-                <div className="carousel-container-landscape">
+                <div className="carousel-container-landscape ">
                     <ImageCarousel images={weddings} />
                 </div>
 
-                <div className="text-content">
-                    <h1 className="page-subtitle">Weddings</h1>
+
+                <div className="text-content  text-2xl padding-separator">
+                    <h1 className="page-title">Weddings</h1>
                     <br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo mi. Donec at lacinia erat, at posuere neque. Duis lacinia metus non erat auctor, eu auctor metus sollicitudin.</p>
                     <p>Proin euismod velit ut metus pellentesque, id dapibus ex rhoncus. In bibendum turpis non auctor lacinia. Nulla ac augue eget elit malesuada feugiat. Nullam eleifend, orci non laoreet sodales, metus sem bibendum tellus, eu cursus quam ex a justo. Donec euismod bibendum enim, nec interdum dui.</p>
@@ -53,27 +51,27 @@ const Home = () => {
                 <div className="carousel-container-landscape">
                     <ImageCarousel images={conferences} />
                 </div>
-                <div className="text-content">
-                    <h1 className="page-subtitle">Events</h1>
+                <div className="text-content text-2xl padding-separator">
+                    <h1 className="page-title">Events</h1>
                     <br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo mi. Donec at lacinia erat, at posuere neque. Duis lacinia metus non erat auctor, eu auctor metus sollicitudin.</p>
                     <p>Proin euismod velit ut metus pellentesque, id dapibus ex rhoncus. In bibendum turpis non auctor lacinia. Nulla ac augue eget elit malesuada feugiat. Nullam eleifend, orci non laoreet sodales, metus sem bibendum tellus, eu cursus quam ex a justo. Donec euismod bibendum enim, nec interdum dui.</p>
                     <br/>
-                    <a href="/manuel/photography/conferences" className="page-subtitle flexColumn see-more-link">See more...</a>
+                    <a href="/manuel/photography/conferences" className="page-title flexColumn see-more-link">See more...</a>
                 </div>
 
             </div>
-            <div className="page-content">
-                <div className="carousel-container-portrait">
+            <div className="page-content ">
+                <div className="carousel-container-landscape">
                     <ImageCarousel images={portraits} />
                 </div>
-                <div className="text-content">
-                    <h1 className="page-subtitle">Portraits</h1>
+                <div className="text-content text-2xl padding-separator ">
+                    <h1 className="page-title">Portraits</h1>
                     <br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget justo mi. Donec at lacinia erat, at posuere neque. Duis lacinia metus non erat auctor, eu auctor metus sollicitudin.</p>
                     <p>Proin euismod velit ut metus pellentesque, id dapibus ex rhoncus. In bibendum turpis non auctor lacinia. Nulla ac augue eget elit malesuada feugiat. Nullam eleifend, orci non laoreet sodales, metus sem bibendum tellus, eu cursus quam ex a justo. Donec euismod bibendum enim, nec interdum dui.</p>
                     <br/>
-                    <a href="/manuel/photography/portraits" className="page-subtitle flexColumn see-more-link">See more...</a>
+                    <a href="/manuel/photography/portraits" className="page-title flexColumn see-more-link">See more...</a>
                 </div>
             </div>
 
