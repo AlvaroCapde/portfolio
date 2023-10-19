@@ -38,27 +38,7 @@ images = [
     '/clients/HTB/htb_26.jpg',
     '/clients/HTB/htb_27.jpg',
     '/clients/HTB/htb_28.jpg',
-    '/clients/HTB/htb_29.jpg',
-    '/clients/HTB/htb_30.jpg',
-    '/clients/HTB/htb_31.jpg',
-    '/clients/HTB/htb_32.jpg',
-    '/clients/HTB/htb_33.jpg',
-    '/clients/HTB/htb_34.jpg',
-    '/clients/HTB/htb_35.jpg',
-    '/clients/HTB/htb_36.jpg',
-    '/clients/HTB/htb_37.jpg',
-    '/clients/HTB/htb_38.jpg',
-    '/clients/HTB/htb_39.jpg',
-    '/clients/HTB/htb_40.jpg',
-    '/clients/HTB/htb_41.jpg',
-    '/clients/HTB/htb_42.jpg',
-    '/clients/HTB/htb_43.jpg',
-    '/clients/HTB/htb_44.jpg',
-    '/clients/HTB/htb_45.jpg',
-    '/clients/HTB/htb_46.jpg',
-    '/clients/HTB/htb_47.jpg',
-    '/clients/HTB/htb_48.jpg',
-    '/clients/HTB/htb_49.jpg'
+
 ];
 function App() {
 
