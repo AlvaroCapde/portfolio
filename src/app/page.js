@@ -24,19 +24,10 @@ export default function Home() {
         <main className="flex min-h-screen items-center justify-center p-24">
 
             <div className="flex flex-col items-center justify-center">
-                {loading ? (
-                    result ? (
-                        <div className="text-center">
-                            <div className={`text-5xl font-bold ${result === 'success' ? 'text-green-700' : 'text-red-600'}`}>
-                                {result === 'success' ? 'Resumes loaded with success!' : 'Failed to load resumes'}
-                            </div>
-                            <button onClick={beginLoading} className="bg-slate-500 rounded-full px-6 py-4 text-white font-bold">Reload</button>
-                        </div>
-                    ) : (
-                        <LoadingScreen />
-                    )
-                ) : (
-                    <div className="flex flex-col items-center">
+                    <LoadingScreen/>
+                <h1 className='text-slate-400 text-5xl font-extrabold mb-20'>EPIC RESUMES</h1>
+                    <div className="flex items-center">
+                        <div className='text-center'>
                         <div className="m-10" style={{ width: '300px', height: '300px' }}>
                             <a
                                 href="/manuel"
@@ -44,6 +35,9 @@ export default function Home() {
                                 style={{ backgroundImage: 'url("/Manuel_Solano_Foto.jpg")', backgroundSize: 'cover' }}
                             ></a>
                         </div>
+                        <p className='text-slate-400 text-2xl font-extrabold animate-bounce'>Manuel Solano Olivares </p>
+                        </div>
+                        <div className='text-center'>
                         <div className="m-10" style={{ width: '300px', height: '300px' }}>
                             <a
                                href="/alvaro"
@@ -51,16 +45,11 @@ export default function Home() {
                                 style={{ backgroundImage: 'url("Alvaro_Capde_Foto.JPG")', backgroundSize: 'cover', backgroundPosition: 'center calc(50% - 50px)'}}
                             ></a>
                         </div>
+                            <p className='text-slate-400 text-2xl font-extrabold animate-bounce'>Alvaro Capdevila Ponce de Leon </p>
+                        </div>
                     </div>
-                )}
+
             </div>
-
         </main>
-
-
-
-
-
-
     );
 };
