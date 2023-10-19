@@ -2,7 +2,7 @@
 import React from 'react';
 import ImageCarousel from "@/Components/carousel/Carousel";
 import NavBar from "@/Components/nav-bar/NavBar";
-import Head from 'next/head';
+
 
 import '../../styles.css';
 
@@ -19,9 +19,7 @@ const Home = () => {
     return (
         <div className="stdFont">
         <div className="page-margin " style={{maxWidth:'80%', marginLeft: 'auto', marginRight: 'auto'}}>
-            <Head>
-                Manu Solano
-            </Head>
+
             <NavBar/>
             <h1 className="main-title">Manuel fernando solano olivares</h1>
             <div className="page-content">

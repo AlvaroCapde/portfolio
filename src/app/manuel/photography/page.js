@@ -2,7 +2,7 @@
 import React from 'react';
 import ImageCarousel from "@/Components/carousel/Carousel";
 import NavBar from "@/Components/nav-bar/NavBar";
-import Head from 'next/head';
+
 
 import '../../../styles.css';
 import {LoadingScreen} from "@/Components/LoadingScreen";
