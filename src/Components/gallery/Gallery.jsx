@@ -5,7 +5,7 @@ function Gallery({ photos }) {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-        // Simulate loading images
+
         setIsLoading(true);
         setTimeout(() => {
             setDisplayedPhotos(photos.slice(0, 12)); // Initially load 12 images
@@ -14,7 +14,7 @@ function Gallery({ photos }) {
     }, [photos]);
 
     const loadMorePhotos = () => {
-        // Simulate loading more images
+
         setIsLoading(true);
         setTimeout(() => {
             const currentLength = displayedPhotos.length;

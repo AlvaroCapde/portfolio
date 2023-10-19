@@ -1,11 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
-import Footer from "@/Components/footer/Footer";
 import Gallery from "@/Components/gallery/Gallery";
 import Downloads from "@/Components/download-btns/Downloads";
-import Head from 'next/head';
-
 import PasswordProtectedPage from "@/Components/password/PasswordProtectedPage";
 
 import '../../../../styles.css';

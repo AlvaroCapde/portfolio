@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
-
 import Gallery from "@/Components/gallery/Gallery";
 import {LoadingScreen} from "@/Components/LoadingScreen";
 

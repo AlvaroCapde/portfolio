@@ -2,7 +2,6 @@
 import React from 'react';
 import ImageCarousel from "@/Components/carousel/Carousel";
 import NavBar from "@/Components/nav-bar/NavBar";
-import Footer from "@/Components/footer/Footer";
 import Head from 'next/head';
 
 import '../../styles.css';

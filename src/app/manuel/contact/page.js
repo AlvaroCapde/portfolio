@@ -2,8 +2,6 @@
 
 import React from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
-import Footer from "@/Components/footer/Footer";
-
 import '../../../styles.css';
 
 function Contact() {

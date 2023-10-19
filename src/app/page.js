@@ -48,7 +48,7 @@ export default function Home() {
                             <a
                                href="/alvaro"
                                 className="bg-slate-500 rounded-full block w-full h-full"
-                                style={{ backgroundImage: 'url("foto.png")', backgroundSize: 'cover' }}
+                                style={{ backgroundImage: 'url("Alvaro_Capde_Foto.JPG")', backgroundSize: 'cover', backgroundPosition: 'center calc(50% - 50px)'}}
                             ></a>
                         </div>
                     </div>

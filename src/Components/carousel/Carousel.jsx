@@ -7,9 +7,8 @@ const ImageCarousel = ({ images }) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // Increment the current index to move to the next slide
             setCurrentIndex((currentIndex + 1) % images.length);
-        }, 5000); // 5000 milliseconds = 5 seconds
+        }, 5000);
 
         return () => {
             clearInterval(interval);
@@ -18,7 +17,6 @@ const ImageCarousel = ({ images }) => {
 
     return (
         <Carousel
-
             showThumbs={false}
             selectedItem={currentIndex}
             onChange={setCurrentIndex}

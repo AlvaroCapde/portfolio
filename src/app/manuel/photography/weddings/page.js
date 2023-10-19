@@ -2,8 +2,6 @@
 
 import React from 'react';
 import NavBar from "@/Components/nav-bar/NavBar";
-import Footer from "@/Components/footer/Footer";
-import PasswordProtectedPage from "@/Components/password/PasswordProtectedPage";
 import Gallery from "@/Components/gallery/Gallery";
 
 import '../../../../styles.css';

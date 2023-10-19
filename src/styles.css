@@ -113,10 +113,6 @@ button:disabled {
 }
 
 
-body{
-    background: conic-gradient(at 125% center, rgba(219, 231, 255, 0.5), rgba(111, 127, 150, 0.5), rgba(219, 231, 255, 0.5));
-}
-
 .body-padding{
     padding: 50px 100px;
 }
@@ -169,6 +165,7 @@ body{
     background-color: rgba(108, 123, 150, 0.15);
     border-collapse: separate;
     border-spacing: 0;
+    min-width:800px;
     width: 50%;
     line-height: 800%;
     border: 10px solid rgba(80, 92, 107, 0.25);
