@@ -103,7 +103,7 @@ function App() {
                 downloadLink="/clients/Ana_Sofi/Ana_Sofi.zip"
                 slideshowLink="https://drive.google.com/file/u/1/d/1i3TMtZvKoPyCvX7yNAETWTq3KFlGUee5/view?usp=sharing"
             />
-            <div className="App page-margin stdFont" style={{ marginTop: '-5%', }}>
+            <div className="App page-margin stdFont" style={{ marginTop: '-100px;' }}>
 
                 <NavBar></NavBar>
                 <div className="body-padding">

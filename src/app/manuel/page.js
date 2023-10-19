@@ -33,7 +33,7 @@ const Home = () => {
                 </div>
                 </div>
                 <div className="text-content  resume-text " style={{minWidth:"500px"}}>
-                    <h1 className="page-title" >about me</h1>
+                    <h1 className="page-title about-me-title" >about me</h1>
                     <br/>
                     <p className="about-me-text ">My name is Manuel Solano, I am a 22 year old animation student in Universidad Panamericana and professional photographer from Guadalajara, Jalisco.</p>
 

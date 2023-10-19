@@ -37,7 +37,7 @@ function Gallery({ photos }) {
 
             {displayedPhotos.length < photos.length && (
                 <button className="stdButton" type="submit" onClick={loadMorePhotos} disabled={isLoading}>
-                    Load more
+                    LOAD MORE
                 </button>
             )}
         </div>
