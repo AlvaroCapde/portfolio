@@ -28,7 +28,7 @@ images = [
 function App() {
 
     return (
-        <div className="App page-margin">
+        <div className="App page-margin stdFont">
 <LoadingScreen/>
             <NavBar />
             <h1 className="main-title">conferences</h1>

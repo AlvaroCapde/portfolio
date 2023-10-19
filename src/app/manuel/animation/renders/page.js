@@ -43,7 +43,7 @@ const Home = () => {
     return (
 
 
-        <div className="page-margin" >
+        <div className="page-margin stdFont" >
             <LoadingScreen/>
             <NavBar></NavBar>
             <h1 className="main-title">renders</h1>

@@ -12,7 +12,13 @@
     text-align: center;
 
 }
+body{
+}
+.stdFont{
 
+
+
+}
 h1 {
     font-size: 24px;
 }
@@ -28,6 +34,19 @@ h1 {
 }
 .carousel-status{
     display: none;
+}
+.background-highlight{
+    background-color: rgba(108, 123, 150, 0.15);
+    border-radius: 50px;
+
+    box-shadow: 0 0 20px rgba(108, 123, 150, 1);
+}
+.background-highlight-round{
+    background-color: rgba(108, 123, 150, 0.15);
+
+
+    box-shadow: 0 0 20px rgba(108, 123, 150, 1);
+    border-radius:100%;
 }
 
 img {
@@ -125,6 +144,7 @@ button:disabled {
 }
 
 .page-title {
+    font-family: Georgia, serif;
     font-size: 28px;
     font-weight: bold;
     color: #333;
@@ -132,6 +152,7 @@ button:disabled {
     text-transform: uppercase;
 }
 .main-title {
+    font-family: Georgia, serif;
     font-size: 4em;
     font-weight: bold;
     color: #333;
@@ -142,6 +163,7 @@ button:disabled {
 }
 
 .page-subtitle {
+    font-family: Georgia, serif;
     font-size: 2em;
     font-weight: bold;
     color: #333;
@@ -247,9 +269,11 @@ width: 30%;
     padding: 0 100px !important;
 }
 .resume-text{
+    font-family: "Franklin Gothic", sans-serif;
     font-size:24px;
 }
 .about-me-text{
+    font-family: "Franklin Gothic", sans-serif;
     font-size:36px;
 }
 @media screen and (max-width: 40em) {

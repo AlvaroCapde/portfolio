@@ -5,16 +5,14 @@ function Gallery({ photos }) {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-
         setIsLoading(true);
         setTimeout(() => {
-            setDisplayedPhotos(photos.slice(0, 12)); // Initially load 12 images
+            setDisplayedPhotos(photos.slice(0, 12));
             setIsLoading(false);
         }, 1000);
     }, [photos]);
 
     const loadMorePhotos = () => {
-
         setIsLoading(true);
         setTimeout(() => {
             const currentLength = displayedPhotos.length;
@@ -35,12 +33,13 @@ function Gallery({ photos }) {
                         <img src={photo} alt={`Photo ${index}`} />
                     </div>
                 ))}
-                {isLoading}
             </div>
 
-            <button className="stdButton" type="submit" onClick={loadMorePhotos} disabled={isLoading}>
-                Load more
-            </button>
+            {displayedPhotos.length < photos.length && (
+                <button className="stdButton" type="submit" onClick={loadMorePhotos} disabled={isLoading}>
+                    Load more
+                </button>
+            )}
         </div>
     );
 }

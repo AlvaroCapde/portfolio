@@ -8,7 +8,7 @@ function Contact() {
     return (
         <div>
             <NavBar></NavBar>
-            <div className="flexColumn h-full page-margin">
+            <div className="flexColumn h-full page-margin stdFont">
                 <h1 className="main-title">Contact Information</h1>
                 <table className="contact-table">
                     <tbody >
@@ -26,7 +26,7 @@ function Contact() {
                     </tr>
                     <tr>
                         <td className="b-l-c page-title"><strong>Instagram:</strong></td>
-                        <td className="b-r-c page-title"><a href="https://www.instagram.com/manusolano.photography">Instagram</a></td>
+                        <td className="b-r-c page-title"><a href="https://www.instagram.com/manusolano.photography">@manusolano.photography</a></td>
                     </tr>
                     </tbody>
                 </table>

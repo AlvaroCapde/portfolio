@@ -24,9 +24,9 @@ function ProjectCarousel({ projects }) {
                     <ProjectCard key={i} project={project} />
                 ))}
             </div>
-            {/* Add Scroll Indicator with dracula scheme and lines */}
 
-            {/* TODO: Elavate the indicator on md onwards */}
+
+
 
             <div className="absolute left-0 z-50 flex items-center justify-center w-full h-10 bottom-32 xs:bottom-4 md:bottom-0">
                 <div className="flex space-x-2">

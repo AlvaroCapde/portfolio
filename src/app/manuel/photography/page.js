@@ -21,15 +21,15 @@ const conferences = [
 ];
 const portraits  = [
 
-    "/portraitPhotos/Retrato_02.jpg",
-    "/portraitPhotos/Retrato_04.jpg",
-    "/portraitPhotos/Retrato_06.jpg",
-    "/portraitPhotos/Retrato_07.jpg",
+    "/portraitPhotos/Retrato_01_Landscape.jpg",
+    "/portraitPhotos/Retrato_02_Landscape.jpg",
+    "/portraitPhotos/Retrato_03_Landscape.jpg",
+
 ];
 
 const Home = () => {
     return (
-        <div className="page-margin" >
+        <div className="page-margin stdFont" >
 
             <LoadingScreen/>
             <NavBar></NavBar>

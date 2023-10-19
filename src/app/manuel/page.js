@@ -17,25 +17,27 @@ const showcase = [
 
 const Home = () => {
     return (
-        <div className="page-margin" >
+        <div className="stdFont">
+        <div className="page-margin " style={{maxWidth:'80%', marginLeft: 'auto', marginRight: 'auto'}}>
             <Head>
                 Manu Solano
             </Head>
             <NavBar/>
             <h1 className="main-title">Manuel fernando solano olivares</h1>
             <div className="page-content">
-                <div className="m-10" style={{ width: '600px', height: '600px' }}> {/* Adjust the width and height as needed */}
+                <div >
+                <div className="m-10 " style={{ width: '600px', height: '600px' }}>
                     <a
 
-                        className="bg-slate-500 rounded-full block  w-full h-full"
+                        className="bg-slate-500 rounded-full block  w-full h-full background-highlight-round"
                         style={{ backgroundImage: 'url("/Manuel_Solano_Foto.jpg")', backgroundSize: 'cover' }}
                     ></a>
                 </div>
-
-                <div className="text-content  resume-text ">
-                    <h1 className="page-title">about me</h1>
+                </div>
+                <div className="text-content  resume-text " style={{minWidth:"500px"}}>
+                    <h1 className="page-title" >about me</h1>
                     <br/>
-                    <p className="about-me-text">My name is Manuel Solano, I am a 22 year old animation student in Universidad Panamericana and professional photographer from Guadalajara, Jalisco.</p>
+                    <p className="about-me-text ">My name is Manuel Solano, I am a 22 year old animation student in Universidad Panamericana and professional photographer from Guadalajara, Jalisco.</p>
 
 
                     <br/>
@@ -43,7 +45,7 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className="page-content info-page">
+            <div className="page-content info-page background-highlight">
                 <div className="text-content  resume-text ">
                     <h1 className="page-title ">academic history</h1>
                     <br/>
@@ -56,10 +58,11 @@ const Home = () => {
                 </div>
 
                 <div className="text-content  resume-text ">
-                    <h1 className="page-title">work experience</h1>
+                    <h1 className="page-title" >work experience</h1>
                     <br/>
-                    <ul className="list-disc">
+                    <ul >
                         <li>Independent employment as a 3D render designer for informational and commercial purposes.</li>
+                        <br/>
                         <li>Independent employment as an event photographer, specializing in weddings and conferences.</li>
                     </ul>
 
@@ -67,17 +70,23 @@ const Home = () => {
 
             </div>
 
-            <div>
+            <div style={{marginTop:'100px'}}s>
                 <br/>
-                <h1 className="main-title">My work</h1>
+                <h1 className="main-title " >My work</h1>
                 <br/>
-                <ImageCarousel images={showcase} />
-            </div>
-            <div className="page-content info-page">
+                <div style={{width:'125%', marginLeft: '-12.5%'}}>
+                <ImageCarousel  images={showcase} />
+            </div></div>
+            <div style={{marginTop:'100px'}}>
+
+            <h1 className="main-title ">skills</h1>
+                <br/>
+            <div className="page-content info-page background-highlight "  >
+
                 <div className="text-content  resume-text ">
                     <h1 className="page-title ">soft skills</h1>
                     <br/>
-                    <ul className="list-inside list-disc text-center">
+                    <ul className="list-inside text-center">
                         <li>Problem-solving</li>
                         <li>Critical thinking</li>
                         <li>Effective communication</li>
@@ -91,13 +100,14 @@ const Home = () => {
                 </div>
 
                 <div className="text-content  resume-text ">
+
                     <h1 className="page-title">hard skills</h1>
                     <br/>
-                    <ul className="list-inside list-disc text-center">
+                    <ul className="list-inside text-center">
                         <li>Microsoft Office</li>
                         <li>Adobe Creative Cloud</li>
                         <li>Autodesk Maya</li>
-                        <li>NextLimit Realflow</li>
+                        <li>NextLimit RealFlow</li>
                         <li>C++ and Python (intermediate)</li>
                         <li>Digital camera operation (DSLR and Mirrorless)</li>
                         <li>Camera drone operation</li>
@@ -108,7 +118,7 @@ const Home = () => {
                 <div className="text-content  resume-text ">
                     <h1 className="page-title ">languages</h1>
                     <br/>
-                    <ul className="list-inside list-disc text-center">
+                    <ul className="list-inside  text-center" >
                         <li>Spanish (Native)</li>
                         <li>English (C2 CAE/TOEFL)</li>
                         <li>Italian (B2 CILS)</li>
@@ -119,7 +129,7 @@ const Home = () => {
 
 
                 </div>
-
+            </div>
             </div>
 
 
@@ -127,7 +137,7 @@ const Home = () => {
 
 
 
-
+        </div>
         </div>
     );
 };

@@ -16,17 +16,22 @@ const images = [
     "/portraitPhotos/Retrato_06.jpg",
     "/portraitPhotos/Retrato_07.jpg",
     "/portraitPhotos/Retrato_08.jpg",
+    "/portraitPhotos/Retrato_01_Landscape.jpg",
+    "/portraitPhotos/Retrato_02_Landscape.jpg",
+    "/portraitPhotos/Retrato_03_Landscape.jpg",
+    "/portraitPhotos/Retrato_04_Landscape.jpg",
+
 ];
 
 
 
 function App() {
     return (
-        <div className="App page-margin" >
+        <div className="App page-margin stdFont" >
             <LoadingScreen/>
             <NavBar />
             <h1 className="main-title">portraits</h1>
-            <Gallery photos={images} /> {/* Use the Gallery component with wedding photos */}
+            <Gallery photos={images} />
 
 
         </div>

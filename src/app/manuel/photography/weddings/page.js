@@ -44,7 +44,7 @@ function App() {
     return (
         <div>
         <LoadingScreen/>
-        <div className="App page-margin">
+        <div className="App page-margin stdFont">
 
             <NavBar />
             <h1 className="main-title">weddings</h1>
